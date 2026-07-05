@@ -127,6 +127,16 @@ export default function Page() {
     setTimeout(() => scrollTo("experiences"), 30);
   };
 
+  const handleSearchDate = (v: string) => {
+    setSearchDate(v);
+    setTimeout(() => scrollTo("experiences"), 30);
+  };
+
+  const handleSearchPax = (v: string) => {
+    setSearchPax(v);
+    setTimeout(() => scrollTo("experiences"), 30);
+  };
+
   const pickTraveler = (type: string) => {
     setForm((s) => ({ ...s, type }));
     setFormState("idle");
@@ -187,7 +197,7 @@ export default function Page() {
       <a href="#main" onClick={(e) => { e.preventDefault(); scrollTo("main"); }} className="absolute left-[-9999px] top-2 z-[200] bg-navy text-white px-4 py-[10px] rounded no-underline font-semibold focus:left-3">Skip to content</a>
       <Header lang={lang} scrolled={scrolled} mobileOpen={mobileOpen} t={t} onNav={nav} onToggleMobile={toggleMobile} onSetLang={setLangFn} waGeneral={waGeneral} />
       <main id="main" ref={mainRef}>
-        <Hero t={t} onNav={nav} waHero={waGeneral} searchDest={searchDest} searchType={searchType} searchDate={searchDate} searchPax={searchPax} onSearch={onSearch} onSearchDest={handleSearchDest} onSearchType={handleSearchType} onSearchDate={setSearchDate} onSearchPax={setSearchPax} />
+        <Hero t={t} onNav={nav} waHero={waGeneral} searchDest={searchDest} searchType={searchType} searchDate={searchDate} searchPax={searchPax} onSearch={onSearch} onSearchDest={handleSearchDest} onSearchType={handleSearchType} onSearchDate={handleSearchDate} onSearchPax={handleSearchPax} />
         <TrustBar t={t} />
         <Destinations t={t} isMobile={isMobile} onNav={nav} setDestFilter={setDestFilter} />
         <Experiences t={t} activeFilter={activeFilter} destFilter={destFilter} lang={lang} onSetFilter={setFilter} onViewExp={viewExp} waExp={waExp} />

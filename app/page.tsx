@@ -118,13 +118,11 @@ export default function Page() {
   const handleSearchDest = (v: string) => {
     setSearchDest(v);
     setDestFilter(v || "all");
-    setTimeout(() => scrollTo("experiences"), 30);
   };
 
   const handleSearchType = (v: string) => {
     setSearchType(v);
     setActiveFilter(v || "all");
-    setTimeout(() => scrollTo("experiences"), 30);
   };
 
   const handleSearchDate = (v: string) => {

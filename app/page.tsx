@@ -85,6 +85,14 @@ export default function Page() {
     };
   }, [lang]);
 
+  useEffect(() => {
+    setSearchDest(destFilter === "all" ? "" : destFilter);
+  }, [destFilter]);
+
+  useEffect(() => {
+    setSearchType(activeFilter);
+  }, [activeFilter]);
+
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
     if (!el) return;
@@ -95,12 +103,28 @@ export default function Page() {
   const nav = (id: string) => { setMobileOpen(false); scrollTo(id); };
   const toggleMobile = () => setMobileOpen((s) => !s);
   const setLangFn = (l: "en" | "es") => setLang(l);
-  const setFilter = (f: string) => setActiveFilter(f);
+  const setFilter = (f: string) => {
+    setActiveFilter(f);
+    setSearchType(f);
+    setTimeout(() => scrollTo("experiences"), 30);
+  };
 
   const onSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setActiveFilter(searchType || "all");
     setDestFilter(searchDest || "all");
+    setTimeout(() => scrollTo("experiences"), 30);
+  };
+
+  const handleSearchDest = (v: string) => {
+    setSearchDest(v);
+    setDestFilter(v || "all");
+    setTimeout(() => scrollTo("experiences"), 30);
+  };
+
+  const handleSearchType = (v: string) => {
+    setSearchType(v);
+    setActiveFilter(v || "all");
     setTimeout(() => scrollTo("experiences"), 30);
   };
 
@@ -169,7 +193,7 @@ export default function Page() {
       <a href="#main" onClick={(e) => { e.preventDefault(); scrollTo("main"); }} className="absolute left-[-9999px] top-2 z-[200] bg-navy text-white px-4 py-[10px] rounded no-underline font-semibold focus:left-3">Skip to content</a>
       <Header lang={lang} scrolled={scrolled} mobileOpen={mobileOpen} t={t} onNav={nav} onToggleMobile={toggleMobile} onSetLang={setLangFn} waGeneral={waGeneral} />
       <main id="main" ref={mainRef}>
-        <Hero t={t} onNav={nav} waHero={waGeneral} searchDest={searchDest} searchType={searchType} searchDate={searchDate} searchPax={searchPax} onSearch={onSearch} onSearchDest={setSearchDest} onSearchType={setSearchType} onSearchDate={setSearchDate} onSearchPax={setSearchPax} />
+        <Hero t={t} onNav={nav} waHero={waGeneral} searchDest={searchDest} searchType={searchType} searchDate={searchDate} searchPax={searchPax} onSearch={onSearch} onSearchDest={handleSearchDest} onSearchType={handleSearchType} onSearchDate={setSearchDate} onSearchPax={setSearchPax} />
         <TrustBar t={t} />
         <Destinations t={t} isMobile={isMobile} onNav={nav} setDestFilter={setDestFilter} />
         <ThingsToDo t={t} onFilterAndGo={filterAndGo} />

@@ -104,20 +104,11 @@ export default async function ExperiencePage({ params, searchParams }: Props) {
               href={waLink}
               target="_blank"
               rel="noopener"
-              className="flex items-center justify-center gap-2 w-full bg-[#25d366] text-white font-semibold text-[15px] py-3 rounded-[4px] no-underline hover:opacity-90 transition-opacity mb-3"
+              className="flex items-center justify-center gap-2 w-full bg-[#25d366] text-white font-semibold text-[15px] py-3 rounded-[4px] no-underline hover:opacity-90 transition-opacity"
             >
               <span className="w-2.5 h-2.5 rounded-full bg-white" />
               {t.ask}
             </a>
-
-            <button
-              type="button"
-              disabled
-              className="w-full bg-navy text-white font-semibold text-[15px] py-3 rounded-[4px] opacity-50 cursor-not-allowed"
-              title="Online booking coming soon"
-            >
-              {t.book}
-            </button>
           </div>
         </div>
       </div>

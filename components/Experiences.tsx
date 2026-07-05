@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 interface ExperiencesProps {
   t: Record<string, any>;
@@ -142,13 +143,12 @@ export default function Experiences({
                   <span className="font-serif text-[19px] font-semibold text-teal">{t.priceOnReq}</span>
                 </div>
                 <div className="flex gap-[9px]">
-                  <button
-                    type="button"
-                    onClick={() => onViewExp(x.dest === "maya" ? "Riviera Maya" : "Riviera Nayarit / Puerto Vallarta", typeLabels[x.type])}
-                    className="flex-1 bg-navy text-white border-none rounded-[4px] font-semibold text-[14px] py-3 cursor-pointer hover:bg-ocean focus:outline-2 focus:outline-coral focus:outline-offset-[2px]"
+                  <Link
+                    href={`/experience/${x.id}?lang=${lang}`}
+                    className="flex-1 bg-navy text-white border-none rounded-[4px] font-semibold text-[14px] py-3 text-center no-underline hover:bg-ocean focus:outline-2 focus:outline-coral focus:outline-offset-[2px]"
                   >
                     {t.viewExp}
-                  </button>
+                  </Link>
                   <a
                     href={waExp(x.name, x.destLabel)}
                     target="_blank"

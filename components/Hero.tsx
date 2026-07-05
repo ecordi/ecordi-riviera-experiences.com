@@ -61,13 +61,13 @@ export default function Hero({
         </span>
       </div>
 
-      <div className="relative z-[4] w-full max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)] pb-[clamp(40px,6vw,72px)] text-offwhite">
+      <div className="relative z-[4] w-full max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)] pb-[clamp(20px,3vw,36px)] sm:pb-[clamp(40px,6vw,72px)] text-offwhite">
         <div className="max-w-[760px]">
           <p className="inline-flex items-center gap-[10px] font-mono text-[12.5px] tracking-[.22em] uppercase text-[#f1c9b3] mb-[22px]">
             <span aria-hidden="true" className="w-[26px] h-[1px] bg-[#f1c9b3]" />
             {t.eyebrow}
           </p>
-          <h1 className="font-serif font-medium text-[clamp(38px,6.4vw,80px)] leading-[1.02] tracking-[-.01em] mb-[22px] text-balance">
+          <h1 className="font-serif font-medium text-[clamp(30px,6.4vw,80px)] leading-[1.02] tracking-[-.01em] mb-[18px] text-balance">
             {t.heroTitle}
           </h1>
           <p className="text-[clamp(16px,2vw,20px)] leading-[1.55] max-w-[560px] text-offwhite/90 mb-[30px]">
@@ -111,7 +111,7 @@ export default function Hero({
         <form
           onSubmit={onSearch}
           aria-label="Find an experience"
-          className="bg-paper rounded-[6px] shadow-[0_24px_60px_-28px_rgba(7,36,51,.55)] p-[clamp(16px,2vw,22px)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(168px,1fr))] gap-[14px] items-end translate-y-1/2"
+          className="bg-paper rounded-[6px] shadow-[0_24px_60px_-28px_rgba(7,36,51,.55)] p-[clamp(16px,2vw,22px)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(168px,1fr))] gap-[14px] items-end mt-6 sm:mt-0 sm:translate-y-1/2"
         >
           <div className="flex flex-col gap-[6px]">
             <label htmlFor="s-dest" className="text-[12px] font-semibold tracking-[.06em] uppercase text-teal">

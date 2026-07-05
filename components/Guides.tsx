@@ -2,7 +2,7 @@ interface Props { t: Record<string, any>; onNav: (id: string) => void; }
 export default function Guides({ t, onNav }: Props) {
   const images = ["/images/guide-nayarit.jpg", "/images/guide-pv.jpg", "/images/guide-maya.jpg"];
   return (
-    <section className="py-[clamp(56px,8vw,104px)]">
+    <section className="py-[clamp(28px,3.5vw,40px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(28px,3.5vw,44px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-teal mb-[14px]">{t.guidesEyebrow}</p>

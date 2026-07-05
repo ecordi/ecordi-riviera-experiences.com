@@ -1,7 +1,7 @@
 interface Props { t: Record<string, any>; faqOpen: number; onToggle: (i: number) => void; }
 export default function FAQ({ t, faqOpen, onToggle }: Props) {
   return (
-    <section className="py-[clamp(56px,8vw,104px)] bg-sand-soft">
+    <section className="py-[clamp(28px,3.5vw,40px)] bg-sand-soft">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(28px,3.5vw,44px)]">
           <h2 className="font-serif font-medium text-[clamp(28px,4vw,48px)] leading-[1.08] tracking-[-.01em] mb-4 text-balance">{t.faqTitle}</h2>

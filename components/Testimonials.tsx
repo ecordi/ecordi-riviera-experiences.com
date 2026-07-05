@@ -1,7 +1,7 @@
 interface Props { t: Record<string, any>; }
 export default function Testimonials({ t }: Props) {
   return (
-    <section className="py-[clamp(56px,8vw,104px)] bg-sand-soft">
+    <section className="py-[clamp(28px,3.5vw,40px)] bg-sand-soft">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(28px,3.5vw,44px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-coral mb-[14px]">{t.tsEyebrow}</p>

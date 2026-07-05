@@ -9,7 +9,7 @@ export default function Gallery({ t, isMobile }: Props) {
     { label: t.g6, col: "1/-1", h: "220px", img: "/images/culture.jpg" },
   ];
   return (
-    <section id="guides" className="py-[clamp(56px,8vw,104px)]">
+    <section id="guides" className="py-[clamp(28px,3.5vw,40px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(36px,5vw,60px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-coral mb-[14px]">{t.storyEyebrow}</p>

@@ -1,7 +1,7 @@
 interface Props { t: Record<string, any>; }
 export default function WhySection({ t }: Props) {
   return (
-    <section id="why" className="py-[clamp(72px,10vw,128px)]">
+    <section id="why" className="py-[clamp(36px,4.5vw,56px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(36px,5vw,60px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-coral mb-[14px]">{t.whyEyebrow}</p>

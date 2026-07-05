@@ -1,7 +1,7 @@
 interface Props { t: Record<string, any>; }
 export default function HowItWorks({ t }: Props) {
   return (
-    <section className="pb-[clamp(8px,2vw,16px)]">
+    <section className="pt-[clamp(20px,2.5vw,28px)] pb-[clamp(8px,2vw,16px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(36px,5vw,60px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-teal mb-[14px]">{t.howEyebrow}</p>

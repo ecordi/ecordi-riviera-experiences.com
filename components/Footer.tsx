@@ -69,7 +69,7 @@ export default function Footer({ t, onNav, waFooter, waFinal, year }: FooterProp
 
   return (
     <>
-      <section className="py-[clamp(72px,10vw,120px)] bg-deep text-offwhite">
+      <section className="py-[clamp(36px,4.5vw,56px)] bg-deep text-offwhite">
         <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)] text-center">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-[#f1c9b3] mb-4">{t.finalEyebrow}</p>
           <h2 className="font-serif font-medium text-[clamp(30px,4.4vw,52px)] leading-[1.07] tracking-[-.01em] mb-4 text-balance">{t.finalTitle}</h2>
@@ -86,7 +86,7 @@ export default function Footer({ t, onNav, waFooter, waFinal, year }: FooterProp
         </div>
       </section>
 
-      <footer className="bg-navy text-offwhite py-[clamp(40px,6vw,64px)]">
+      <footer className="bg-navy text-offwhite py-[clamp(24px,3vw,36px)]">
         <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
           <div className="flex flex-wrap items-start gap-[clamp(24px,4vw,40px)] mb-[clamp(28px,4vw,44px)]">
             <div className="max-w-[340px]">

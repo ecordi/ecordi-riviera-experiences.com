@@ -90,7 +90,7 @@ export default function Experiences({
   ];
 
   return (
-    <section id="experiences" className="py-[clamp(56px,8vw,104px)] bg-sand-soft">
+    <section id="experiences" className="py-[clamp(36px,4.5vw,56px)] bg-sand-soft">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div className="flex flex-wrap items-end justify-between gap-5 mb-[clamp(28px,3.5vw,44px)]">
           <div className="max-w-[620px]">

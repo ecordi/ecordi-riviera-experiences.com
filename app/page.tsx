@@ -7,7 +7,6 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import Destinations from "@/components/Destinations";
-import ThingsToDo from "@/components/ThingsToDo";
 import Experiences from "@/components/Experiences";
 import PrivateSection from "@/components/PrivateSection";
 import WhySection from "@/components/WhySection";
@@ -183,11 +182,6 @@ export default function Page() {
   const waFromForm = waLink(t.waForm(form));
   const waExp = (name: string, dest: string) => waLink(t.waExp(name, dest));
 
-  const filterAndGo = (type: string) => {
-    setActiveFilter(type);
-    setTimeout(() => scrollTo("experiences"), 30);
-  };
-
   return (
     <div lang={lang}>
       <a href="#main" onClick={(e) => { e.preventDefault(); scrollTo("main"); }} className="absolute left-[-9999px] top-2 z-[200] bg-navy text-white px-4 py-[10px] rounded no-underline font-semibold focus:left-3">Skip to content</a>
@@ -196,7 +190,6 @@ export default function Page() {
         <Hero t={t} onNav={nav} waHero={waGeneral} searchDest={searchDest} searchType={searchType} searchDate={searchDate} searchPax={searchPax} onSearch={onSearch} onSearchDest={handleSearchDest} onSearchType={handleSearchType} onSearchDate={setSearchDate} onSearchPax={setSearchPax} />
         <TrustBar t={t} />
         <Destinations t={t} isMobile={isMobile} onNav={nav} setDestFilter={setDestFilter} />
-        <ThingsToDo t={t} onFilterAndGo={filterAndGo} />
         <Experiences t={t} activeFilter={activeFilter} destFilter={destFilter} lang={lang} onSetFilter={setFilter} onViewExp={viewExp} waExp={waExp} />
         <PrivateSection t={t} lang={lang} formState={formState} form={form} errors={errors} onField={setField} onSubmit={submitForm} onReset={resetForm} onPickTraveler={pickTraveler} onNav={nav} waPrivate={waPrivate} waFromForm={waFromForm} />
         <WhySection t={t} />

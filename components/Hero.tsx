@@ -111,7 +111,7 @@ export default function Hero({
         <form
           onSubmit={onSearch}
           aria-label="Find an experience"
-          className="bg-paper rounded-[6px] shadow-[0_24px_60px_-28px_rgba(7,36,51,.55)] p-[clamp(16px,2vw,22px)] grid grid-cols-[repeat(auto-fit,minmax(168px,1fr))] gap-[14px] items-end translate-y-1/2"
+          className="bg-paper rounded-[6px] shadow-[0_24px_60px_-28px_rgba(7,36,51,.55)] p-[clamp(16px,2vw,22px)] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(168px,1fr))] gap-[14px] items-end translate-y-1/2"
         >
           <div className="flex flex-col gap-[6px]">
             <label htmlFor="s-dest" className="text-[12px] font-semibold tracking-[.06em] uppercase text-teal">

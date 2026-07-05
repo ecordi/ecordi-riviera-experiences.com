@@ -1,6 +1,6 @@
 "use client";
 
-import { tones } from "@/lib/data";
+import { useEffect, useState } from "react";
 
 interface ExperiencesProps {
   t: Record<string, any>;
@@ -70,9 +70,14 @@ export default function Experiences({
     { id: "spa-day", name: t.x38, dest: "nayarit", destLabel: "Puerto Vallarta", duration: t.dur3, type: "private", desc: t.x38d, img: "/images/spa-day.jpg", alt: "Beachfront massage cabana overlooking the Pacific ocean" },
   ];
 
-  const visible = EXP
+  const filtered = EXP
     .filter((x) => (activeFilter === "all" ? true : x.type === activeFilter))
     .filter((x) => (destFilter === "all" || !destFilter ? true : x.dest === destFilter));
+
+  const [shown, setShown] = useState(8);
+  useEffect(() => { setShown(8); }, [activeFilter, destFilter]);
+  const visible = filtered.slice(0, shown);
+  const hasMore = shown < filtered.length;
 
   const filterDefs = [
     ["all", t.fAll],
@@ -163,6 +168,27 @@ export default function Experiences({
         {visible.length === 0 && (
           <p className="text-center py-10 text-[16px] text-navy/60">{t.noResults}</p>
         )}
+
+        {filtered.length > 0 && (
+          <p className="text-center text-[13px] text-navy/50 mt-4">
+            {lang === "es"
+              ? `Mostrando ${visible.length} de ${filtered.length} experiencias`
+              : `Showing ${visible.length} of ${filtered.length} experiences`}
+          </p>
+        )}
+
+        {hasMore && (
+          <div className="flex justify-center mt-6">
+            <button
+              type="button"
+              onClick={() => setShown((s) => s + 8)}
+              className="px-8 py-3 rounded-[4px] bg-navy text-white font-semibold text-[14px] cursor-pointer hover:bg-ocean transition-colors"
+            >
+              {lang === "es" ? "Cargar más experiencias" : "Load more experiences"}
+            </button>
+          </div>
+        )}
+
         <p className="font-mono text-[12px] text-navy/50 mt-[26px] text-center">{t.priceNote}</p>
       </div>
     </section>

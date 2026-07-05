@@ -39,6 +39,8 @@ export const translations: Record<string, any> = {
     travelersLabel: 'Who\u2019s traveling?',
     trvRomantic: 'Couples', trvFamily: 'Family', trvFriends: 'Friends', trvGroup: 'Groups', trvCorporate: 'Corporate',
     noResults: 'No experiences in this category yet. Try another filter or message us directly.',
+    loadMore: 'Load more experiences',
+    showing: 'Showing {n} of {total} experiences',
     priceNote: 'Every experience is priced per date, group size and season — ask us and we’ll send a clear, all-in quote.',
     privEyebrow: 'Private & personalized',
     privTitle: 'Tell us your idea. We\u2019ll build the day around it.',

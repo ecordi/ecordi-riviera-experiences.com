@@ -1,7 +1,7 @@
 interface Props { t: Record<string, any>; isMobile: boolean; onNav: (id: string) => void; setDestFilter: (d: string) => void; }
 export default function Destinations({ t, isMobile, onNav, setDestFilter }: Props) {
   return (
-    <section id="destinations" className="pt-[clamp(56px,8vw,96px)] pb-[clamp(28px,3vw,48px)]">
+    <section id="destinations" className="pt-[clamp(56px,8vw,96px)] pb-[clamp(8px,1.2vw,16px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[680px] mb-[clamp(36px,5vw,60px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-coral mb-[14px]">{t.destEyebrow}</p>

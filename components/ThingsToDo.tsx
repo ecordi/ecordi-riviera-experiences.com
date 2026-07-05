@@ -9,7 +9,7 @@ export default function ThingsToDo({ t, onFilterAndGo }: Props) {
     { k: "all", icon: "\u2726", label: t.tAll, c: "#d85b39" },
   ];
   return (
-    <section aria-label="Things to do" className="pt-[clamp(24px,3vw,40px)] pb-[clamp(8px,2vw,16px)]">
+    <section aria-label="Things to do" className="pt-[clamp(4px,0.6vw,10px)] pb-[clamp(8px,2vw,16px)]">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)]">
         <div data-reveal className="max-w-[640px] mb-[clamp(28px,3.5vw,44px)]">
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-turq mb-[14px]">{t.thingsEyebrow}</p>

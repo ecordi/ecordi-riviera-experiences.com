@@ -42,7 +42,7 @@ export default function PrivateSection({
   ];
 
   return (
-    <section id="private" className="py-[clamp(72px,10vw,128px)] bg-deep text-offwhite">
+    <section id="private" className="pt-[clamp(40px,5vw,64px)] pb-[clamp(56px,8vw,96px)] bg-deep text-offwhite">
       <div className="max-w-[1280px] mx-auto px-[clamp(18px,4vw,48px)] grid grid-cols-1 md:grid-cols-[1fr_1.05fr] gap-[clamp(32px,5vw,64px)] items-start">
         <div>
           <p className="font-mono text-[12.5px] tracking-[.2em] uppercase text-[#f1c9b3] mb-4">{t.privEyebrow}</p>
